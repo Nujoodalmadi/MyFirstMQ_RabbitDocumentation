@@ -11,12 +11,12 @@ amqp.connect("amqp://localhost", function(error0, connection) {
     }
     var queue = "task_queue";
     var msg = process.argv.slice(2).join(" ") || "Hello World!";
+
     // create queue
     channel.assertQueue(queue, {
       durable: true
     });
-    // send message to queue (exchange)
-    //this is the default or nameless exchange: messages are routed to the queue with the name specified as first parameter, if it exists.
+    //this is a default or nameless exchange: messages are routed to the queue with the name specified as first parameter, if it exists.
     channel.sendToQueue(queue, Buffer.from(msg), {
       persistent: true
     });
