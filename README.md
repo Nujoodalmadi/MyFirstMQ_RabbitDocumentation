@@ -1,2 +1,2 @@
-JavaScript (Node) code examples from [RabbitMQ
+JavaScript (Node) code from [RabbitMQ
 tutorials](https://www.rabbitmq.com/getstarted.html).
